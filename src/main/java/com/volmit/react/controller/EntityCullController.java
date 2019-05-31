@@ -25,7 +25,6 @@ import com.volmit.react.util.JSONArray;
 import com.volmit.react.util.JSONObject;
 import com.volmit.react.util.M;
 import com.volmit.react.util.S;
-import java.util.HashSet;
 
 import primal.bukkit.world.Players;
 import primal.lang.collection.GList;
@@ -142,7 +141,7 @@ public class EntityCullController extends Controller
 			@Override
 			public void run()
 			{
-				searching: for(UUID i : trackReasons.k().clone())
+				searching: for(UUID i : trackReasons.k())
 				{
 					for(Entity j : je)
 					{
