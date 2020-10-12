@@ -10,7 +10,7 @@ public enum Side
 
 	private String ss;
 
-	Side(String s)
+	private Side(String s)
 	{
 		ss = s;
 	}

@@ -13,7 +13,7 @@ public enum Amounts
 
 	private int a;
 
-	Amounts(int a)
+	private Amounts(int a)
 	{
 		this.a = a;
 	}

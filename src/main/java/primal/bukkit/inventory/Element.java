@@ -7,51 +7,51 @@ import primal.lang.collection.GList;
 
 public interface Element
 {
-	MaterialBlock getMaterial();
+	public MaterialBlock getMaterial();
 
-	Element setMaterial(MaterialBlock b);
+	public Element setMaterial(MaterialBlock b);
 
-	boolean isEnchanted();
+	public boolean isEnchanted();
 
-	Element setEnchanted(boolean enchanted);
+	public Element setEnchanted(boolean enchanted);
 
-	String getId();
+	public String getId();
 
-	String getName();
+	public String getName();
 
-	Element setProgress(double progress);
+	public Element setProgress(double progress);
 
-	double getProgress();
+	public double getProgress();
 
-	short getEffectiveDurability();
+	public short getEffectiveDurability();
 
-	Element setCount(int c);
+	public Element setCount(int c);
 
-	int getCount();
+	public int getCount();
 
-	ItemStack computeItemStack();
+	public ItemStack computeItemStack();
 
-	Element setBackground(boolean bg);
+	public Element setBackground(boolean bg);
 
-	boolean isBackgrond();
+	public boolean isBackgrond();
 
-	Element setName(String name);
+	public Element setName(String name);
 
-	Element addLore(String loreLine);
+	public Element addLore(String loreLine);
 
-	GList<String> getLore();
+	public GList<String> getLore();
 
-	Element call(ElementEvent event, Element context);
+	public Element call(ElementEvent event, Element context);
 
-	Element onLeftClick(Callback<Element> clicked);
+	public Element onLeftClick(Callback<Element> clicked);
 
-	Element onRightClick(Callback<Element> clicked);
+	public Element onRightClick(Callback<Element> clicked);
 
-	Element onShiftLeftClick(Callback<Element> clicked);
+	public Element onShiftLeftClick(Callback<Element> clicked);
 
-	Element onShiftRightClick(Callback<Element> clicked);
+	public Element onShiftRightClick(Callback<Element> clicked);
 
-	Element onDraggedInto(Callback<Element> into);
+	public Element onDraggedInto(Callback<Element> into);
 
-	Element onOtherDraggedInto(Callback<Element> other);
+	public Element onOtherDraggedInto(Callback<Element> other);
 }

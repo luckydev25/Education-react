@@ -2,21 +2,22 @@ package com.volmit.react.util;
 
 import java.util.List;
 
+@SuppressWarnings("hiding")
 public interface IBursterator<T>
 {
-	void burst(T t);
+	public void burst(T t);
 
-	void setTimeLock(double ms);
+	public void setTimeLock(double ms);
 
-	double getEstimatedTimeUse();
+	public double getEstimatedTimeUse();
 
-	int flush();
+	public int flush();
 
-	int flush(Profiler p);
+	public int flush(Profiler p);
 
-	void queue(T t);
+	public void queue(T t);
 
-	void queue(List<T> t);
+	public void queue(List<T> t);
 
-	void queue(T[] t);
+	public void queue(T[] t);
 }

@@ -25,7 +25,7 @@ public final class Reflection {
 		 * @param arguments - the arguments to pass to the constructor.
 		 * @return The constructed object.
 		 */
-		Object invoke(Object... arguments);
+		public Object invoke(Object... arguments);
 	}
 
 	/**
@@ -39,7 +39,7 @@ public final class Reflection {
 		 * @param arguments - the arguments to pass to the method.
 		 * @return The return value, or NULL if is void.
 		 */
-		Object invoke(Object target, Object... arguments);
+		public Object invoke(Object target, Object... arguments);
 	}
 
 	/**
@@ -54,7 +54,7 @@ public final class Reflection {
 		 * @param target - the target object, or NULL for a static field.
 		 * @return The value of the field.
 		 */
-		T get(Object target);
+		public T get(Object target);
 
 		/**
 		 * Set the content of a field.
@@ -62,7 +62,7 @@ public final class Reflection {
 		 * @param target - the target object, or NULL for a static field.
 		 * @param value - the new value of the field.
 		 */
-		void set(Object target, Object value);
+		public void set(Object target, Object value);
 
 		/**
 		 * Determine if the given object has this field.
@@ -70,7 +70,7 @@ public final class Reflection {
 		 * @param target - the object to test.
 		 * @return TRUE if it does, FALSE otherwise.
 		 */
-		boolean hasField(Object target);
+		public boolean hasField(Object target);
 	}
 
 	// Deduce the net.minecraft.server.v* package

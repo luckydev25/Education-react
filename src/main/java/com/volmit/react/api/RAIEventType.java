@@ -10,7 +10,7 @@ public enum RAIEventType
 
 	private String[] msgs;
 
-	RAIEventType(String... ss)
+	private RAIEventType(String... ss)
 	{
 		msgs = ss;
 	}

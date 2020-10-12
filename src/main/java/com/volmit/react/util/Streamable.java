@@ -2,7 +2,7 @@ package com.volmit.react.util;
 
 public interface Streamable
 {
-	void toBytes(OSS out) throws Exception;
+	public void toBytes(OSS out) throws Exception;
 
-	void fromBytes(ISS in) throws Exception;
+	public void fromBytes(ISS in) throws Exception;
 }

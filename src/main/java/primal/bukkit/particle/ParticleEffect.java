@@ -47,6 +47,7 @@ import primal.bukkit.particle.ReflectionUtils.PackageType;
  * @author DarkBlade12
  * @version 1.7
  */
+@SuppressWarnings("unused")
 public enum ParticleEffect
 {
 	/**
@@ -478,7 +479,7 @@ public enum ParticleEffect
 	 * @param properties
 	 *            Properties of this particle effect
 	 */
-	ParticleEffect(String name, int id, int requiredVersion, ParticleProperty... properties)
+	private ParticleEffect(String name, int id, int requiredVersion, ParticleProperty... properties)
 	{
 		this.name = name;
 		this.id = id;
@@ -1238,7 +1239,7 @@ public enum ParticleEffect
 	 * @author DarkBlade12
 	 * @since 1.7
 	 */
-	public enum ParticleProperty
+	public static enum ParticleProperty
 	{
 		/**
 		 * The particle effect requires water to be displayed
@@ -1255,7 +1256,7 @@ public enum ParticleEffect
 		/**
 		 * The particle effect uses the offsets as color values
 		 */
-		COLORABLE
+		COLORABLE;
 	}
 
 	/**
@@ -2064,6 +2065,7 @@ public enum ParticleEffect
 			 * @param cause
 			 *            Cause of the exception
 			 */
+			@SuppressWarnings("unused")
 			public VersionIncompatibleException(String message, Throwable cause)
 			{
 				super(message, cause);

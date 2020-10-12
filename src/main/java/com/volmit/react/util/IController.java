@@ -4,19 +4,19 @@ import org.json.JSONObject;
 
 public interface IController
 {
-	void start();
+	public void start();
 
-	void stop();
+	public void stop();
 
-	void tick();
+	public void tick();
 
-	int getInterval();
+	public int getInterval();
 
-	boolean isUrgent();
+	public boolean isUrgent();
 
-	void setTime(double ms);
+	public void setTime(double ms);
 
-	double getTime();
+	public double getTime();
 
-	void dump(JSONObject object);
+	public void dump(JSONObject object);
 }

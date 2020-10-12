@@ -2,9 +2,9 @@ package com.volmit.react.util;
 
 public interface IPacket extends Streamable
 {
-	int getId();
+	public int getId();
 
-	PacketBinding getBinding();
+	public PacketBinding getBinding();
 
-	String getPacketName();
+	public String getPacketName();
 }

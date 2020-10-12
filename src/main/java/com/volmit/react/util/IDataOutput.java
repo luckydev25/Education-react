@@ -4,5 +4,5 @@ import java.io.File;
 
 public interface IDataOutput
 {
-	void write(DataCluster c, File f);
+	public void write(DataCluster c, File f);
 }

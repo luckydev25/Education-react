@@ -575,7 +575,7 @@ public final class ReflectionUtils
 		 * @param path
 		 *            Path of the package
 		 */
-		PackageType(String path)
+		private PackageType(String path)
 		{
 			this.path = path;
 		}
@@ -588,7 +588,7 @@ public final class ReflectionUtils
 		 * @param path
 		 *            Path of the package
 		 */
-		PackageType(PackageType parent, String path)
+		private PackageType(PackageType parent, String path)
 		{
 			this(parent + "." + path);
 		}
@@ -678,7 +678,7 @@ public final class ReflectionUtils
 		 * @param reference
 		 *            Reference class of this data type
 		 */
-		DataType(Class<?> primitive, Class<?> reference)
+		private DataType(Class<?> primitive, Class<?> reference)
 		{
 			this.primitive = primitive;
 			this.reference = reference;

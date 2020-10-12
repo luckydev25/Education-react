@@ -160,7 +160,7 @@ public enum BlastResistance
 
 	private int br;
 
-	BlastResistance(int br)
+	private BlastResistance(int br)
 	{
 		this.br = br;
 	}

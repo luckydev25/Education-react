@@ -2,11 +2,11 @@ package com.volmit.react.api;
 
 public interface IActionSource
 {
-	void sendResponse(String r);
+	public void sendResponse(String r);
 
-	void sendResponseSuccess(String r);
+	public void sendResponseSuccess(String r);
 
-	void sendResponseError(String r);
+	public void sendResponseError(String r);
 
-	void sendResponseActing(String r);
+	public void sendResponseActing(String r);
 }

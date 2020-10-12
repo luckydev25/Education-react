@@ -5,5 +5,5 @@ import primal.logic.io.DL.DownloadState;
 @FunctionalInterface
 public interface DownloadMonitor 
 {
-	void onUpdate(DownloadState state, double progress, long elapsed, long estimated, long bps, long iobps, long size, long downloaded, long buffer, double bufferuse);
+	public void onUpdate(DownloadState state, double progress, long elapsed, long estimated, long bps, long iobps, long size, long downloaded, long buffer, double bufferuse);
 }

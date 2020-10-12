@@ -13,6 +13,7 @@ import primal.lang.collection.GList;
  * @param <T>
  *            the interface to be embedded.
  */
+@SuppressWarnings("hiding")
 public interface Embedded<T>
 {
 	/**
@@ -20,7 +21,7 @@ public interface Embedded<T>
 	 *
 	 * @return the objects
 	 */
-    GList<T> get();
+	public GList<T> get();
 
 	/**
 	 * Add an embedded object to this embedded object
@@ -28,5 +29,5 @@ public interface Embedded<T>
 	 * @param t
 	 *            the embedded object
 	 */
-    void add(T t);
+	public void add(T t);
 }

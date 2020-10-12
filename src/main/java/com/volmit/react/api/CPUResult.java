@@ -16,7 +16,7 @@ public enum CPUResult
 
 	private String m;
 
-	CPUResult(String m)
+	private CPUResult(String m)
 	{
 		this.m = m;
 	}

@@ -6,13 +6,13 @@ import primal.lang.collection.GList;
 
 public interface IRAI
 {
-	GoalManager getGoalManager();
+	public GoalManager getGoalManager();
 
-	void tick();
+	public void tick();
 
-	GList<RAIEvent> getEvents();
+	public GList<RAIEvent> getEvents();
 
-	void callEvent(RAIEvent e);
+	public void callEvent(RAIEvent e);
 
-	GList<IActionSource> getListeners();
+	public GList<IActionSource> getListeners();
 }

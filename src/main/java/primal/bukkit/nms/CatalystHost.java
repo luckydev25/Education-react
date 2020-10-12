@@ -19,67 +19,67 @@ import primal.util.text.C;
 
 public interface CatalystHost extends PacketListener, Listener
 {
-	void sendItemStack(Player p, ItemStack is, int slot);
+	public void sendItemStack(Player p, ItemStack is, int slot);
 
-	void sendEntityMetadata(Player p, int eid, Object... objects);
+	public void sendEntityMetadata(Player p, int eid, Object... objects);
 
-	void sendEntityMetadata(Player p, int eid, List<Object> objects);
+	public void sendEntityMetadata(Player p, int eid, List<Object> objects);
 
-	Object getMetaEntityRemainingAir(int airTicksLeft);
+	public Object getMetaEntityRemainingAir(int airTicksLeft);
 
-	Object getMetaEntityCustomName(String name);
+	public Object getMetaEntityCustomName(String name);
 
-	Object getMetaEntityProperties(boolean onFire, boolean crouched, boolean sprinting, boolean swimming, boolean invisible, boolean glowing, boolean flyingElytra);
+	public Object getMetaEntityProperties(boolean onFire, boolean crouched, boolean sprinting, boolean swimming, boolean invisible, boolean glowing, boolean flyingElytra);
 
-	Object getMetaEntityGravity(boolean gravity);
+	public Object getMetaEntityGravity(boolean gravity);
 
-	Object getMetaEntitySilenced(boolean silenced);
+	public Object getMetaEntitySilenced(boolean silenced);
 
-	Object getMetaArmorStandProperties(boolean isSmall, boolean hasArmos, boolean noBasePlate, boolean marker);
+	public Object getMetaArmorStandProperties(boolean isSmall, boolean hasArmos, boolean noBasePlate, boolean marker);
 
-	Object getMetaEntityCustomNameVisible(boolean visible);
+	public Object getMetaEntityCustomNameVisible(boolean visible);
 
-	void scroll(Player sender, int previous);
+	public void scroll(Player sender, int previous);
 
-	int getAction(Object packetIn);
+	public int getAction(Object packetIn);
 
-	Vector getDirection(Object packet);
+	public Vector getDirection(Object packet);
 
-	void spawnFallingBlock(int eid, UUID id, Location l, Player player, MaterialBlock mb);
+	public void spawnFallingBlock(int eid, UUID id, Location l, Player player, MaterialBlock mb);
 
-	void removeEntity(int eid, Player p);
+	public void removeEntity(int eid, Player p);
 
-	void moveEntityRelative(int eid, Player p, double x, double y, double z, boolean onGround);
+	public void moveEntityRelative(int eid, Player p, double x, double y, double z, boolean onGround);
 
-	void teleportEntity(int eid, Player p, Location l, boolean onGround);
+	public void teleportEntity(int eid, Player p, Location l, boolean onGround);
 
-	void spawnArmorStand(int eid, UUID id, Location l, int data, Player player);
+	public void spawnArmorStand(int eid, UUID id, Location l, int data, Player player);
 
-	void sendTeam(Player p, String id, String name, String prefix, String suffix, C color, int mode);
+	public void sendTeam(Player p, String id, String name, String prefix, String suffix, C color, int mode);
 
-	void addTeam(Player p, String id, String name, String prefix, String suffix, C color);
+	public void addTeam(Player p, String id, String name, String prefix, String suffix, C color);
 
-	void updateTeam(Player p, String id, String name, String prefix, String suffix, C color);
+	public void updateTeam(Player p, String id, String name, String prefix, String suffix, C color);
 
-	void addToTeam(Player p, String id, String... entities);
+	public void addToTeam(Player p, String id, String... entities);
 
-	void removeTeam(Player p, String id);
+	public void removeTeam(Player p, String id);
 
-	void removeFromTeam(Player p, String id, String... entities);
+	public void removeFromTeam(Player p, String id, String... entities);
 
-	void displayScoreboard(Player p, int slot, String id);
+	public void displayScoreboard(Player p, int slot, String id);
 
-	void displayScoreboard(Player p, C c, String id);
+	public void displayScoreboard(Player p, C c, String id);
 
-	void sendNewObjective(Player p, String id, String name);
+	public void sendNewObjective(Player p, String id, String name);
 
-	void sendDeleteObjective(Player p, String id);
+	public void sendDeleteObjective(Player p, String id);
 
-	void sendEditObjective(Player p, String id, String name);
+	public void sendEditObjective(Player p, String id, String name);
 
-	void sendScoreUpdate(Player p, String name, String objective, int score);
+	public void sendScoreUpdate(Player p, String name, String objective, int score);
 
-	void sendScoreRemove(Player p, String name, String objective);
+	public void sendScoreRemove(Player p, String name, String objective);
 
 	/**
 	 * Send remove glowing color data fro mthe entity
@@ -89,7 +89,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param glowing
 	 *            the entity
 	 */
-    void sendRemoveGlowingColorMeta(Player p, Entity glowing);
+	public void sendRemoveGlowingColorMeta(Player p, Entity glowing);
 
 	/**
 	 * Send a remove glowing color meta entity by uuid
@@ -99,7 +99,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param glowing
 	 *            the glowing uuid
 	 */
-    void sendRemoveGlowingColorMetaEntity(Player p, UUID glowing);
+	public void sendRemoveGlowingColorMetaEntity(Player p, UUID glowing);
 
 	/**
 	 * Send glow removal
@@ -111,7 +111,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param name
 	 *            the name
 	 */
-    void sendRemoveGlowingColorMetaPlayer(Player p, UUID glowing, String name);
+	public void sendRemoveGlowingColorMetaPlayer(Player p, UUID glowing, String name);
 
 	/**
 	 * Send glowing meta
@@ -123,7 +123,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param color
 	 *            the color
 	 */
-    void sendGlowingColorMeta(Player p, Entity glowing, C color);
+	public void sendGlowingColorMeta(Player p, Entity glowing, C color);
 
 	/**
 	 * Send glowing meta
@@ -135,7 +135,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param color
 	 *            the color
 	 */
-    void sendGlowingColorMetaEntity(Player p, UUID euid, C color);
+	public void sendGlowingColorMetaEntity(Player p, UUID euid, C color);
 
 	/**
 	 * Send glowing meta
@@ -147,7 +147,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param color
 	 *            the color
 	 */
-    void sendGlowingColorMetaName(Player p, String euid, C color);
+	public void sendGlowingColorMetaName(Player p, String euid, C color);
 
 	/**
 	 * Update the passengers for the given player
@@ -159,7 +159,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param passengers
 	 *            the passenger entity ids
 	 */
-    void updatePassengers(Player p, int vehicle, int... passengers);
+	public void updatePassengers(Player p, int vehicle, int... passengers);
 
 	/**
 	 * Send an advancement like a notification
@@ -173,7 +173,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param text
 	 *            the text to display
 	 */
-    void sendAdvancement(Player p, FrameType type, ItemStack is, String text);
+	public void sendAdvancement(Player p, FrameType type, ItemStack is, String text);
 
 	/**
 	 * Obtain a modifiable copy of a chunk in which light, blocks, and biomes can be
@@ -189,7 +189,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the chunk to shadow copy
 	 * @return the shadow copy
 	 */
-    ShadowChunk shadowCopy(Chunk at);
+	public ShadowChunk shadowCopy(Chunk at);
 
 	/**
 	 * Constructs a full chunk send packet based off the world, refreshing it if
@@ -199,7 +199,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the chunk
 	 * @return the packet
 	 */
-    Object packetChunkFullSend(Chunk chunk);
+	public Object packetChunkFullSend(Chunk chunk);
 
 	/**
 	 * Send chunk unload
@@ -210,7 +210,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the z
 	 * @return the packet
 	 */
-    Object packetChunkUnload(int x, int z);
+	public Object packetChunkUnload(int x, int z);
 
 	/**
 	 * Send a block change packet
@@ -223,7 +223,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the block data
 	 * @return the packet
 	 */
-    Object packetBlockChange(Location block, int blockId, byte blockData);
+	public Object packetBlockChange(Location block, int blockId, byte blockData);
 
 	/**
 	 * Send a block action packet https://wiki.vg/Block_Actions
@@ -238,7 +238,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the block type
 	 * @return the packet
 	 */
-    Object packetBlockAction(Location block, int action, int param, int blocktype);
+	public Object packetBlockAction(Location block, int action, int param, int blocktype);
 
 	/**
 	 * Send an animation packet as an entity animating
@@ -250,7 +250,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the animation type
 	 * @return the packet
 	 */
-    Object packetAnimation(int eid, int animation);
+	public Object packetAnimation(int eid, int animation);
 
 	/**
 	 * Send a block break animation packet. Each entity id can dig another block
@@ -264,7 +264,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the damage 0-9
 	 * @return the packet
 	 */
-    Object packetBlockBreakAnimation(int eid, Location location, byte damage);
+	public Object packetBlockBreakAnimation(int eid, Location location, byte damage);
 
 	/**
 	 * Change the game state
@@ -276,7 +276,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the value
 	 * @return the packet
 	 */
-    Object packetGameState(int mode, float value);
+	public Object packetGameState(int mode, float value);
 
 	/**
 	 * Send a title message. You must send the packetTitleTimes after this to
@@ -286,7 +286,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the title message
 	 * @return the packet
 	 */
-    Object packetTitleMessage(String title);
+	public Object packetTitleMessage(String title);
 
 	/**
 	 * Send a subtitle message. You must send the packetTitleTimes after this to
@@ -297,7 +297,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the subtitle message.
 	 * @return the packet
 	 */
-    Object packetSubtitleMessage(String subtitle);
+	public Object packetSubtitleMessage(String subtitle);
 
 	/**
 	 * Send an action bar message
@@ -306,21 +306,21 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the action message
 	 * @return the packet
 	 */
-    Object packetActionBarMessage(String actionmsg);
+	public Object packetActionBarMessage(String actionmsg);
 
 	/**
 	 * Send a title reset packet (times)
 	 *
 	 * @return the packet
 	 */
-    Object packetResetTitle();
+	public Object packetResetTitle();
 
 	/**
 	 * Send a clear title packet
 	 *
 	 * @return the packet
 	 */
-    Object packetClearTitle();
+	public Object packetClearTitle();
 
 	/**
 	 * Sending packet times displays the last sent title and subtitle. You must send
@@ -335,7 +335,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the fade out time
 	 * @return the packet
 	 */
-    Object packetTimes(int in, int stay, int out);
+	public Object packetTimes(int in, int stay, int out);
 
 	/**
 	 * Get latest settings for the given player
@@ -344,7 +344,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the player
 	 * @return the player settings
 	 */
-    PlayerSettings getSettings(Player p);
+	public PlayerSettings getSettings(Player p);
 
 	/**
 	 * Send a packet to the specified player
@@ -354,7 +354,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param o
 	 *            the packet
 	 */
-    void sendPacket(Player p, Object o);
+	public void sendPacket(Player p, Object o);
 
 	/**
 	 * Send a packet to all players within a radius from the specified location
@@ -366,7 +366,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param o
 	 *            the packet
 	 */
-    void sendRangedPacket(double radius, Location l, Object o);
+	public void sendRangedPacket(double radius, Location l, Object o);
 
 	/**
 	 * Send a packet to all players in the specified world
@@ -376,7 +376,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param o
 	 *            the packet
 	 */
-    void sendGlobalPacket(World w, Object o);
+	public void sendGlobalPacket(World w, Object o);
 
 	/**
 	 * Send a packet to all players on the server
@@ -384,7 +384,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param o
 	 *            the packet
 	 */
-    void sendUniversalPacket(Object o);
+	public void sendUniversalPacket(Object o);
 
 	/**
 	 * Send a packet to all players which have a view distance (captured from client
@@ -397,7 +397,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 * @param o
 	 *            the packet
 	 */
-    void sendViewDistancedPacket(Chunk c, Object o);
+	public void sendViewDistancedPacket(Chunk c, Object o);
 
 	/**
 	 * Checks if the specified player can see the given chunk
@@ -408,7 +408,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the player
 	 * @return true if the player can
 	 */
-    boolean canSee(Chunk c, Player p);
+	public boolean canSee(Chunk c, Player p);
 
 	/**
 	 * Checks if the specified player can see the chunk of the given location
@@ -419,7 +419,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the player
 	 * @return true if the player can
 	 */
-    boolean canSee(Location l, Player p);
+	public boolean canSee(Location l, Player p);
 
 	/**
 	 * Returns the view distance of the given player (maxed by the server's view
@@ -429,7 +429,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the player
 	 * @return the view distance sent from the player client
 	 */
-    int getViewDistance(Player p);
+	public int getViewDistance(Player p);
 
 	/**
 	 * List all of the players that has the specified chunk in their visible view
@@ -439,7 +439,7 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the chunk
 	 * @return the players
 	 */
-    List<Player> getObservers(Chunk c);
+	public List<Player> getObservers(Chunk c);
 
 	/**
 	 * List all of the players that has the specified location's chunk in their
@@ -449,14 +449,14 @@ public interface CatalystHost extends PacketListener, Listener
 	 *            the chunk
 	 * @return the players
 	 */
-    List<Player> getObservers(Location l);
+	public List<Player> getObservers(Location l);
 
 	/**
 	 * Get the server NMS package version e.g 1_12_R1
 	 *
 	 * @return the version
 	 */
-    String getServerVersion();
+	public String getServerVersion();
 
 	/**
 	 * Get a friendly readable version indicator for the intended server/client
@@ -464,23 +464,23 @@ public interface CatalystHost extends PacketListener, Listener
 	 *
 	 * @return the version
 	 */
-    String getVersion();
+	public String getVersion();
 
 	/**
 	 * Start the handler
 	 */
-    void start();
+	public void start();
 
 	/**
 	 * Stop the handler
 	 */
-    void stop();
+	public void stop();
 
-	Set<Object> getTickList(World world);
+	public Set<Object> getTickList(World world);
 
-	Set<Object> getTickListFluid(World world);
+	public Set<Object> getTickListFluid(World world);
 
-	Block getBlock(World world, Object tickListEntry);
+	public Block getBlock(World world, Object tickListEntry);
 
-	Object packetTabHeaderFooter(String h, String f);
+	public Object packetTabHeaderFooter(String h, String f);
 }

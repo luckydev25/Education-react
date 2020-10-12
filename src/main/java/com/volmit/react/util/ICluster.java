@@ -1,10 +1,11 @@
 package com.volmit.react.util;
 
+@SuppressWarnings("hiding")
 public interface ICluster<T>
 {
-	ClusterType getType();
+	public ClusterType getType();
 
-	void set(T t);
+	public void set(T t);
 
-	T get();
+	public T get();
 }

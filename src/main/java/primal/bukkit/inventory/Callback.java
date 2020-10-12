@@ -17,5 +17,5 @@ public interface Callback<T>
 	 * @param t
 	 *            the object to be called back
 	 */
-    void run(T t);
+	public void run(T t);
 }

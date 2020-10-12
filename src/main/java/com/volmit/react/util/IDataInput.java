@@ -4,5 +4,5 @@ import java.io.File;
 
 public interface IDataInput
 {
-	DataCluster read(File f);
+	public DataCluster read(File f);
 }

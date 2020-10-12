@@ -4,13 +4,13 @@ import org.json.JSONObject;
 
 public interface IRecord<T>
 {
-	String getRecordType();
+	public String getRecordType();
 
-	long getRecordTime();
+	public long getRecordTime();
 
-	JSONObject toJSON();
+	public JSONObject toJSON();
 
-	T getRecordObject();
+	public T getRecordObject();
 
-	void fromJSON(JSONObject k);
+	public void fromJSON(JSONObject k);
 }

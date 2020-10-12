@@ -55,7 +55,7 @@ public class AdvancementHolder12
 		this.holders.add(api);
 	}
 
-	public enum AdvancementBackground
+	public static enum AdvancementBackground
 	{
 		ADVENTURE("minecraft:textures/gui/advancements/backgrounds/adventure.png"),
 		END("minecraft:textures/gui/advancements/backgrounds/end.png"),
@@ -396,6 +396,7 @@ public class AdvancementHolder12
 
 		Bukkit.getScheduler().scheduleSyncDelayedTask(PrimalPlugin.instance, new Runnable()
 		{
+			@SuppressWarnings("deprecation")
 			@Override
 			public void run()
 			{

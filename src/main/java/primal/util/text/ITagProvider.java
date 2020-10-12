@@ -16,7 +16,7 @@ public interface ITagProvider
 	 *            the command sender who will see the tag
 	 * @return the tag
 	 */
-    String getTag(CommandSender sender);
+	public String getTag(CommandSender sender);
 
 	/**
 	 * Message the sender with the given tag
@@ -26,5 +26,5 @@ public interface ITagProvider
 	 * @param msg
 	 *            the message
 	 */
-    void msg(CommandSender sender, String msg);
+	public void msg(CommandSender sender, String msg);
 }

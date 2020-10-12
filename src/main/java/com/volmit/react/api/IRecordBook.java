@@ -6,23 +6,23 @@ import primal.lang.collection.GMap;
 
 public interface IRecordBook<T extends IRecord<?>>
 {
-	int getSize();
+	public int getSize();
 
-	T getRecord(long record);
+	public T getRecord(long record);
 
-	long getOldestRecordTime();
+	public long getOldestRecordTime();
 
-	void addRecord(T t);
+	public void addRecord(T t);
 
-	long getLatestRecordTime();
+	public long getLatestRecordTime();
 
-	int countRecords(long from, long to);
+	public int countRecords(long from, long to);
 
-	GMap<Long, T> getRecords(long from, long to);
+	public GMap<Long, T> getRecords(long from, long to);
 
-	int purgeRecordsBefore(long time);
+	public int purgeRecordsBefore(long time);
 
-	void save();
+	public void save();
 
-	File getFile();
+	public File getFile();
 }

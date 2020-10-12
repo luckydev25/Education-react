@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
 @Target(FIELD)
 public @interface Injection
 {
-	InjectionMethod value();
+	public InjectionMethod value();
 }

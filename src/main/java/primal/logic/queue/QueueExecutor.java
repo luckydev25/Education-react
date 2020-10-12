@@ -2,17 +2,17 @@ package primal.logic.queue;
 
 public interface QueueExecutor<T>
 {
-	void queue(Queue<T> t);
+	public void queue(Queue<T> t);
 
-	Queue<T> getQueue();
+	public Queue<T> getQueue();
 
-	void start();
+	public void start();
 
-	void stop();
+	public void stop();
 
-	void doUpdate();
+	public void doUpdate();
 
-	void async(boolean async);
+	public void async(boolean async);
 
-	void interval(int ticks);
+	public void interval(int ticks);
 }

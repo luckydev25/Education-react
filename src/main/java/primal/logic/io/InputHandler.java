@@ -5,5 +5,5 @@ import java.io.InputStream;
 @FunctionalInterface
 public interface InputHandler
 {
-	void read(InputStream in);
+	public void read(InputStream in);
 }

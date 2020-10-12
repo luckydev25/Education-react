@@ -5,15 +5,15 @@ import primal.lang.collection.GSet;
 
 public interface ICache<K, V>
 {
-	GSet<V> get(K k);
+	public GSet<V> get(K k);
 
-	void put(K k, V v);
+	public void put(K k, V v);
 
-	void clear(K k);
+	public void clear(K k);
 
-	void clear();
+	public void clear();
 
-	boolean has(K k);
+	public boolean has(K k);
 
-	GList<K> k();
+	public GList<K> k();
 }

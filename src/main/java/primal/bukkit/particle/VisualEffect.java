@@ -18,7 +18,7 @@ public interface VisualEffect
 	 *
 	 * @return the effects
 	 */
-    GList<VisualEffect> getEffects();
+	public GList<VisualEffect> getEffects();
 
 	/**
 	 * Play this effect. Will loop through all visual effects and play them, or
@@ -27,7 +27,7 @@ public interface VisualEffect
 	 * @param l
 	 *            the location to play the effect
 	 */
-    void play(Location l);
+	public void play(Location l);
 
 	/**
 	 * Add a visual effect to this effect. Nothing will happen unless this is a
@@ -36,5 +36,5 @@ public interface VisualEffect
 	 * @param e
 	 *            the effect
 	 */
-    void addEffect(VisualEffect e);
+	public void addEffect(VisualEffect e);
 }

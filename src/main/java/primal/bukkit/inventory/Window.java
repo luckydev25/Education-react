@@ -5,69 +5,69 @@ import org.bukkit.inventory.ItemStack;
 
 public interface Window
 {
-	Window setDecorator(WindowDecorator decorator);
+	public Window setDecorator(WindowDecorator decorator);
 
-	WindowDecorator getDecorator();
+	public WindowDecorator getDecorator();
 
-	WindowResolution getResolution();
+	public WindowResolution getResolution();
 
-	Window setResolution(WindowResolution resolution);
+	public Window setResolution(WindowResolution resolution);
 
-	Window clearElements();
+	public Window clearElements();
 
-	Window close();
+	public Window close();
 
-	Window open();
+	public Window open();
 
-	Window callClosed();
+	public Window callClosed();
 
-	Window updateInventory();
+	public Window updateInventory();
 
-	Window setVisible(boolean visible);
+	public Window setVisible(boolean visible);
 
-	ItemStack computeItemStack(int viewportSlot);
+	public ItemStack computeItemStack(int viewportSlot);
 
-	int getLayoutRow(int viewportSlottedPosition);
+	public int getLayoutRow(int viewportSlottedPosition);
 
-	int getLayoutPosition(int viewportSlottedPosition);
+	public int getLayoutPosition(int viewportSlottedPosition);
 
-	int getRealLayoutPosition(int viewportSlottedPosition);
+	public int getRealLayoutPosition(int viewportSlottedPosition);
 
-	int getRealPosition(int position, int row);
+	public int getRealPosition(int position, int row);
 
-	int getRow(int realPosition);
+	public int getRow(int realPosition);
 
-	int getPosition(int realPosition);
+	public int getPosition(int realPosition);
 
-	boolean isVisible();
+	public boolean isVisible();
 
-	int getViewportPosition();
+	public int getViewportPosition();
 
-	int getViewportSlots();
+	public int getViewportSlots();
 
-	Window setViewportPosition(int position);
+	public Window setViewportPosition(int position);
 
-	int getMaxViewportPosition();
+	public int getMaxViewportPosition();
 
-	Window scroll(int direction);
+	public Window scroll(int direction);
 
-	int getViewportHeight();
+	public int getViewportHeight();
 
-	Window setViewportHeight(int height);
+	public Window setViewportHeight(int height);
 
-	String getTitle();
+	public String getTitle();
 
-	Window setTitle(String title);
+	public Window setTitle(String title);
 
-	boolean hasElement(int position, int row);
+	public boolean hasElement(int position, int row);
 
-	Window setElement(int position, int row, Element e);
+	public Window setElement(int position, int row, Element e);
 
-	Element getElement(int position, int row);
+	public Element getElement(int position, int row);
 
-	Player getViewer();
+	public Player getViewer();
 
-	Window reopen();
+	public Window reopen();
 
-	Window onClosed(Callback<Window> window);
+	public Window onClosed(Callback<Window> window);
 }

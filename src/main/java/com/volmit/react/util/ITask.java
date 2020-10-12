@@ -2,19 +2,19 @@ package com.volmit.react.util;
 
 public interface ITask
 {
-	int getId();
+	public int getId();
 
-	void run();
+	public void run();
 
-	boolean isRepeating();
+	public boolean isRepeating();
 
-	String getName();
+	public String getName();
 
-	double getComputeTime();
+	public double getComputeTime();
 
-	double getTotalComputeTime();
+	public double getTotalComputeTime();
 
-	double getActiveTime();
+	public double getActiveTime();
 
-	boolean hasCompleted();
+	public boolean hasCompleted();
 }

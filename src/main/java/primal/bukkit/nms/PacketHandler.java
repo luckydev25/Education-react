@@ -16,5 +16,5 @@ public interface PacketHandler<T extends Object>
 	 *            the packet
 	 * @return the packet to actually send
 	 */
-    Object onPacket(Player player, Object packet);
+	public Object onPacket(Player player, Object packet);
 }
