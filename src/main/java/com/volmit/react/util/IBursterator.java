@@ -5,19 +5,19 @@ import java.util.List;
 @SuppressWarnings("hiding")
 public interface IBursterator<T>
 {
-	public void burst(T t);
+	void burst(T t);
 
-	public void setTimeLock(double ms);
+	void setTimeLock(double ms);
 
-	public double getEstimatedTimeUse();
+	double getEstimatedTimeUse();
 
-	public int flush();
+	int flush();
 
-	public int flush(Profiler p);
+	int flush(Profiler p);
 
-	public void queue(T t);
+	void queue(T t);
 
-	public void queue(List<T> t);
+	void queue(List<T> t);
 
-	public void queue(T[] t);
+	void queue(T[] t);
 }

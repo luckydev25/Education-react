@@ -3,9 +3,9 @@ package com.volmit.react.util;
 @SuppressWarnings("hiding")
 public interface ICluster<T>
 {
-	public ClusterType getType();
+	ClusterType getType();
 
-	public void set(T t);
+	void set(T t);
 
-	public T get();
+	T get();
 }
